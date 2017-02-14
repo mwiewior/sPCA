@@ -31,7 +31,7 @@ libraryDependencies ++= Seq(
     excludeAll ExclusionRule(organization = "org.apache.parquet.schema"),
   "org.apache.spark" %% "spark-hive" % sparkVersion % "provided"  excludeAll ExclusionRule(organization = "javax.servlet")
     excludeAll ExclusionRule(organization = "org.apache.parquet.schema"),
-  "org.apache.spark" %% "spark-mllib" % sparkVersion  % "provided"  excludeAll ExclusionRule(organization = "javax.servlet"),
+  "org.apache.spark" %% "spark-mllib" % sparkVersion  /*% "provided"*/  excludeAll ExclusionRule(organization = "javax.servlet"),
   "org.apache.hadoop" % "hadoop-client" % hadoopVersion /*% "provided"*/
     excludeAll ExclusionRule(organization = "javax.servlet"),
   "org.bdgenomics.adam" % "adam-core_2.10" % "0.20.0"
