@@ -10,6 +10,10 @@
       <id>Akka repository</id>
       <url>http://repo.akka.io/releases</url>
     </repository>
+      <repository>
+          <id>mvnrepository</id>
+          <url>https://mvnrepository.com</url>
+      </repository>
   </repositories>
 
   <build>
@@ -47,22 +51,28 @@
     <dependency> <!-- Spark dependency -->
       <groupId>org.apache.spark</groupId>
       <artifactId>spark-core_2.10</artifactId>
-      <version>1.0.0</version>
+      <version>1.6.3</version>
     </dependency>
    <dependency>
         <groupId>org.apache.spark</groupId>
         <artifactId>spark-mllib_2.10</artifactId>
-        <version>1.0.0</version>
+        <version>1.6.3</version>
    </dependency>
   <dependency>
         <groupId>org.apache.hadoop</groupId>
-        <artifactId>hadoop-core</artifactId>
-        <version>1.2.1</version>
+        <artifactId>hadoop-common</artifactId>
+        <version>2.6.0</version>
   </dependency>
   <dependency>
         <groupId>org.apache.mahout</groupId>
         <artifactId>mahout-core</artifactId>
-        <version>0.8</version>
+        <version>0.9</version>
+      <exclusions>
+          <exclusion>
+              <groupId>org.apache.hadoop</groupId>
+              <artifactId>hadoop-core</artifactId>
+          </exclusion>
+      </exclusions>
     </dependency>   
   </dependencies>
 </project>
